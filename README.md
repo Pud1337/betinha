@@ -16,7 +16,7 @@
 - Python 3
 - GTK 4
 - FFmpeg
-- yt-dlp (the repo comes with a precompiled binary at | ./libs/yt-dlp| )
+- yt-dlp ( the repo comes with a precompiled binary at | ./libs/yt-dlp| )
 
 ### Compiling:
 
