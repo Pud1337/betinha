@@ -41,7 +41,7 @@ git clone https://github.com/Pud1337/betinha.git
 
 ## Images
 
-![](https://raw.githubusercontent.com/Pud1337/randomstuff/refs/heads/main/betinha.png "The Betinha GUI")
+![](https://raw.githubusercontent.com/Pud1337/randomstuff/refs/heads/main/betinha.png "The betinha GUI")
 
 # Heads-Up
 
