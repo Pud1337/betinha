@@ -24,7 +24,6 @@
 $ git clone https://github.com/Pud1337/betinha.git 
 $ cd betinha 
 $ gcc converter-gtk4.c -o betinha $(pkg-config --cflags --libs gtk4) -lm -Wall
-
 ```
 ### Precompiled binary:
 
