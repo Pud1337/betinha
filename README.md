@@ -43,7 +43,7 @@ git clone https://github.com/Pud1337/betinha.git
 
 ![](https://raw.githubusercontent.com/Pud1337/randomstuff/refs/heads/main/betinha.png "The Betinha GUI")
 
-# Disclaimer
+# Heads-Up
 
 > The yt-dlp path is hardcoded, so if you want to change the name/location for the binary you will have to recompile the executable. |
  The path for it is right at the start, on the following macro inclusion :
