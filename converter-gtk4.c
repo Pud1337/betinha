@@ -337,7 +337,7 @@ child_watch_ytdlp(GPid pid, gint status, gpointer user_data)
 
 /* Build args and start yt-dlp (relative path), capture stdout for progress */
 static void
-start_ytdlp(AppWidgets *w, const char *url)
+start_ytdlp(AppWidgets *w, const char *url, const char *output)
 {
     /* reset unified model */
     w->phase = PHASE_DOWNLOADING;
@@ -648,13 +648,17 @@ on_convert_clicked(GtkButton *btn, gpointer user_data)
 
     /* If it's a YouTube URL, run the two-phase (download -> transcode) with a single shared bar */
     if (is_youtube_url(input)) {
-        start_ytdlp(w, input);
+        char *fixed_output = append_extension_if_missing(output_raw, fmt);
+        start_ytdlp(w, input, fixed_output);
+        g_free(fixed_output);
         return;
     }
 
     /* else: local file -> single-phase ffmpeg */
+    char *fixed_output = append_extension_if_missing(output_raw, fmt);
     w->total_duration = get_media_duration(input);
-    start_ffmpeg_conversion(w, input, output_raw);
+    start_ffmpeg_conversion(w, input, fixed_output);
+    g_free(fixed_output);
 }
 
 /* ---------- UI setup ---------- */
